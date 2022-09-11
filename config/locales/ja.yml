@@ -2,10 +2,23 @@ ja:
   activerecord:
     models:
       post: 投稿
+      like: いいね
     attributes:
       post:
         content: 内容
         user: ユーザー
+      like:
+        user: ユーザー
+        user_id: ユーザー
+        post: 投稿
+    errors:
+      models:
+        like:
+          attributes:
+            base:
+              owner_forbidden: 自分の投稿にいいねはできません
+            user_id:
+              duplicated: は同じ投稿に複数回いいねはできません
 
   time:
     formats:
